@@ -1,0 +1,24 @@
+/* You can add global styles to this file, and also import other style files */
+.bg-primary, .bg-warning, .bg-danger, .bg-info{
+    border:none; margin-right: 3px;
+}
+   .fa-edit:before,  .fa-user:before, .fa-trash:before, .fa-eye:before{
+       color: #fff;
+    }
+   .btn{
+       margin-right: 3px;
+    }
+    .bg-primary, .bg-warning, .bg-danger, .bg-info{
+        border: none;
+        margin-right: 3px;
+        height: 25px;
+        width: 24px;
+        float: left;
+        text-align: center;
+    }
+       .fa-edit:before,  .fa-user:before, .fa-trash:before, .fa-eye:before{
+           color: #fff;
+        }
+       .btn{
+           margin-right: 3px;
+        }
