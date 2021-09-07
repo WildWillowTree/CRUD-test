@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CrudService } from '../crud.service';
-import Swal from 'sweetalert2/dist/sweetalert2.js';
+//import Swal from 'sweetalert2/dist/sweetalert2.js';
+import { User } from '../interfaces/user';
 
 @Component({
   selector: 'app-users',
@@ -17,24 +18,26 @@ export class UsersComponent implements OnInit {
     //Get all users data
     loadData(){
     //Get all users details
-    this.crudservice.getusers().subscribe((res: any[]) => {
+    this.crudservice.getusers().subscribe((res: any) => {
+      
       this.data = res;
     });
    }
     //Delete user
-    deleteUser(id: any){
+    deleteuser(id: any){
       if(confirm("Are you sure to delete?")){
        //Initializa Params Object
        var myFormData = new FormData();
 
-        myFormData.append('deleteId', id);
+       //Begin assigning parameters
+        myFormData.append('deleteid', id);
         this.crudservice.deleteuser(myFormData);
         //Sweet alert message popup
-        Swal.fire({
+        /*Swal.fire({
           title:"Hurray!!",
           text: "User has been deleted successfully",
           icon: 'success'
-        });
+        });*/
         this.loadData();
      }
    }
